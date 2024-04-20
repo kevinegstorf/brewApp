@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      @if(batches$ | async; as batches){
+      <div class="row">
+        @for(batch of batches; track $index){
+        <div class="card p-4 col-md-3 m-2 ">
+          <h2>Naam: {{ batch.name }}</h2>
+          <h3>Soort: {{batch.type}}</h3>
+          <h4>datum:</h4>
+          <h4>totaal liter:{{ batch.volume }}</h4>
+          <a [routerLink]="['/recepten', batch.recipe]">Link to recipe</a>
+          <h4>Alc: {{ batch.alcohol }}%</h4>
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>

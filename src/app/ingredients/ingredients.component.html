@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row  mt-5">
+    <div class="col">
+      <form class="form d-flex">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="col-8">
+      <button class="btn btn-primary">Nieuw Ingredient toevoegen</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      @if(ingredients$ | async; as ingredients){
+      <div class="row d-block">
+        @for(ingredient of ingredients; track $index){
+        <div class="card p-4 col m-2">
+          <h4>Naam: {{ ingredient.name }}</h4>
+          <h4> Hoeveelheid: <span>{{ ingredient.quantity}} {{ingredient.unit }}</span> </h4>
+          <h4>prijs: {{ ingredient.price }}</h4>
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>

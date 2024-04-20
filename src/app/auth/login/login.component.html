@@ -1,0 +1,49 @@
+<div class="container narrow">
+  <div class="row mt-5">
+    <div class="col">
+      <h1>{{ showLogin ? "Inloggen" : "Aanmelden" }}</h1>
+      <div class="card p-4">
+      <form class="form">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >E-mail</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Wachtwoord</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div class="row d-block mt-2">
+        <div class="col">
+          @if(showLogin){
+            <a
+            [routerLink]="['/change-password']"
+            routerLinkActive="router-link-active"
+            >Wachtwoord vergeten?</a
+            >
+          }
+        </div>
+        <div class="col mt-1">
+          <button class="btn btn-link m-0 p-0" (click)="toggleLogin()">
+            {{
+              showLogin ? "Nog geen account?" : "link naar inloggen"
+            }}
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
