@@ -7,7 +7,8 @@
       </form>
     </div>
     <div class="col-8">
-      <button class="btn btn-primary">Nieuw Ingredient toevoegen</button>
+      <button class="btn btn-primary">
+        Nieuw Ingredient toevoegen</button>
     </div>
   </div>
   <div class="row">
@@ -16,7 +17,7 @@
       @if(ingredients$ | async; as ingredients){
       <div class="row d-block">
         @for(ingredient of ingredients; track $index){
-        <div class="card p-4 col m-2">
+        <div class="card border-dark p-4 col m-2">
           <h4>Naam: {{ ingredient.name }}</h4>
           <h4> Hoeveelheid: <span>{{ ingredient.quantity}} {{ingredient.unit }}</span> </h4>
           <h4>prijs: {{ ingredient.price }}</h4>

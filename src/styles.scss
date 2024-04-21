@@ -1,10 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+
+
+
+$font-family-base: "Fredoka", sans-serif;
+
+/* Overriding bootstrap defaults need to happen after functions import and before other bootstrap imports*/
+$primary: #F87171;
+$secondary: #696969; 
+$dark: #333333; 
+$light: #f3f3f3; 
+$body-color: $dark;
+$danger: #D52B1E;
+$danger-bg-subtle: #F9DFDD;
+$warning: #FFB612;
+$warning-bg-subtle: #FEF4DB;
+$success: #39870C;
+$success-bg-subtle: #E1EDDA;
+$info: #007BC7;
+$info-bg-subtle: #D9EBF7;
+
+$border-radius: 4px;
+$border-color-translucent: #3333;
+$border-color: #3333;
+
+$card-border-width: 2.5px;
+
+$alert-padding-x: 0.5rem;
+$alert-padding-y: 0.5rem;
+$alert-border-width: 0;
+
+$table-color: $dark;
+$table-border-color: var(--gray-100);
+$table-cell-padding-y: 0.75rem;
+$table-cell-padding-x: 1rem;
+
+$accordion-border-color: var(--gray-100);
+$accordion-body-padding-x: 0;
+
+$pagination-bg: transparent;
+
+$form-check-input-width: 1.375em; // total size will be close to 1.5rem
+$form-check-input-border-radius: 0;
+$form-check-input-border: 1px solid var(--bs-secondary); // --gray-600
+
+$modal-header-padding-x: 1.5rem;
+$modal-header-padding-y: 1.5rem;
+$modal-header-padding: 1.5rem 1.5rem;
+$modal-padding: 1rem 1.5rem;
+
+@import "bootstrap/scss/functions";
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
+
+body {
+  background-color: #60A5FA !important;
+}
 
 
 .narrow {
   max-width: 800px;
   margin: 0 auto;
 }
+
